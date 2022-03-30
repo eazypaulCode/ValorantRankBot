@@ -27,6 +27,10 @@ tasks.getByName<Test>("test") {
     useJUnitPlatform()
 }
 
+tasks.withType<JavaCompile> {
+    options.encoding = "UTF-8"
+}
+
 tasks.withType<Jar> {
     val classpath = configurations.runtimeClasspath
 
